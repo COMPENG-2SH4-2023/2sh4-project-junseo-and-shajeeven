@@ -12,15 +12,16 @@ using namespace std;
 
 class GameMechs
 {
-    // Construct the remaining declaration from the project manual.
-
-    // Only some sample members are included here
-
-    // You will include more data members and member functions to complete your design.
+    
 
     private:
+        objPos foodPos;
         char input;
         bool exitFlag;
+        bool loseFlag;
+
+        int score;
+        int speed;
         
         int boardSizeX;
         int boardSizeY;
@@ -30,7 +31,9 @@ class GameMechs
         GameMechs(int boardX, int boardY);
         
         bool getExitFlagStatus();
+        bool getLoseFlagStatus();
         void setExitTrue();
+        void setLoseFlag();
 
         char getInput();
         void setInput(char this_input);
@@ -38,6 +41,9 @@ class GameMechs
 
         int getBoardSizeX();
         int getBoardSizeY();
+        int getScore();
+
+        void incrementScore(int size);
       
 
 };
